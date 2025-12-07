@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { dashboard, login, register } from '@/routes';
 import { Head, Link } from '@inertiajs/vue3';
+import { Switch } from '@/Components/ui/switch'
 
 withDefaults(
     defineProps<{
@@ -838,5 +839,7 @@ withDefaults(
             </main>
         </div>
         <div class="hidden h-14.5 lg:block"></div>
+        <Switch />
     </div>
 </template>
+
