@@ -128,7 +128,7 @@ watch(() => [filters.subject, filters.printType, filters.orderBy], () => {
                                         </header>
 
                                         <ul class="space-y-1 border-t border-[#d8c7b8] p-4">
-                                            <li v-for="label in ['fiction','science','history','technology','business']">
+                                            <li v-for="label in ['fiction','science','history','technology','business']" :key="label">
                                                 <label class="inline-flex items-center gap-2 cursor-pointer">
                                                     <input type="radio" :value="label" v-model="filters.subject" class="size-5 border-[#cdbdaf]">
                                                     <span class="text-sm text-[#3f2f23] capitalize">{{ label }}</span>
@@ -160,7 +160,7 @@ watch(() => [filters.subject, filters.printType, filters.orderBy], () => {
                                         </header>
 
                                         <ul class="space-y-1 border-t border-[#d8c7b8] p-4">
-                                            <li v-for="item in [{v:'books',t:'Books Only'},{v:'magazines',t:'Magazines Only'}]">
+                                            <li v-for="item in [{v:'books',t:'Books Only'},{v:'magazines',t:'Magazines Only'}]" :key="item.v">
                                                 <label class="inline-flex items-center gap-2 cursor-pointer">
                                                     <input type="radio" :value="item.v" v-model="filters.printType" class="size-5 border-[#cdbdaf]">
                                                     <span class="text-sm text-[#3f2f23]">{{ item.t }}</span>

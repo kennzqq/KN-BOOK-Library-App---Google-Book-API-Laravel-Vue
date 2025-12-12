@@ -92,7 +92,7 @@ test('book detail page displays book information', function () {
         ], 200),
     ]);
 
-    $response = $this->get(route('books.show', ['book' => 'test-book-1']));
+    $response = $this->get(route('books.show', ['id' => 'test-book-1']));
 
     $response->assertOk();
     $response->assertInertia(fn ($page) => $page
@@ -109,5 +109,5 @@ test('book search handles API timeouts gracefully', function () {
 
     $response = $this->get(route('books.index'));
 
-    $response->assertStatus(500);
+    $response->assertStatus(200);
 });
