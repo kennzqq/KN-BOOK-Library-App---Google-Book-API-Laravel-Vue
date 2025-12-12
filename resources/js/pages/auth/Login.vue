@@ -10,7 +10,7 @@ import AuthBase from '@/layouts/AuthLayout.vue';
 import { register } from '@/routes';
 import { store } from '@/routes/login';
 import { request } from '@/routes/password';
-import { Form, Head } from '@inertiajs/vue3';
+import { Form, Head, Link } from '@inertiajs/vue3';
 
 defineProps<{
     status?: string;
@@ -105,6 +105,33 @@ defineProps<{
                 Don't have an account?
                 <TextLink :href="register()" :tabindex="5">Sign up</TextLink>
             </div>
+
+<Link
+    href="/"
+    class="group inline-flex items-center text-book-primary hover:text-book-secondary mb-4 text-sm transition-all duration-300"
+>
+    <svg
+        class="w-4 h-4 mr-1 transition-transform duration-300 group-hover:-translate-x-1"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+    >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+        />
+    </svg>
+
+    <span
+        class="transition-all duration-300 group-hover:underline group-hover:tracking-wide group-hover:-translate-x-0.5"
+    >
+        Back to Home
+    </span>
+</Link>
+
+
         </Form>
     </AuthBase>
 </template>
