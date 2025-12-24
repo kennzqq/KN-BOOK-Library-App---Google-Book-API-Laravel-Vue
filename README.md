@@ -2,6 +2,19 @@
 
 A modern web application for discovering and exploring millions of books using Google Books API, built with Laravel and Vue.js.
 
+## Preview
+
+### 🏠 Home Page
+![Home Page](public/images/homepage.png)
+
+### 📖 Book Details Page
+![Book Details](public/images/details.png)
+
+### ℹ️ About Page
+![About Page](public/images/about.png)
+
+
+
 ## Features
 
 - 🔍 **Advanced Book Search** - Search millions of books with powerful filters (subject, print type, order)
@@ -97,11 +110,7 @@ A modern web application for discovering and exploring millions of books using G
    npm run dev
    ```
 
-9. **Add your developer profile picture**
-   
-   Place your photo at `public/images/dev.jpg` for the About page
-
-10. **Visit the application**
+9. **Visit the application**
    
    Open `http://localhost:8000` in your browser
 
@@ -150,7 +159,7 @@ laravel_app/
 │   └── factories/                      # Test data factories
 ├── public/
 │   ├── images/
-│   │   └── dev.jpg                    # Developer profile picture (About page)
+│   │   └── dev.jpg                    #Images
 │   └── build/                         # Compiled assets
 ├── resources/
 │   ├── js/
